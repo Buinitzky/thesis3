@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <in>Archivo.c</in>
+      <in>Comunicacion.c</in>
+      <in>Extras.c</in>
+      <in>Recursos.c</in>
+      <in>Servidor.c</in>
+      <in>Socket.c</in>
+      <in>Socket_Cliente.c</in>
+      <in>Socket_Servidor.c</in>
+      <in>Socket_UDP_Cliente.c</in>
+      <in>leerIps.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>Servidor</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="Archivo.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="Comunicacion.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="Extras.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="Recursos.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="Servidor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Socket.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="Socket_Cliente.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Socket_Servidor.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="Socket_UDP_Cliente.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="leerIps.c" ex="false" tool="0" flavor2="2">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

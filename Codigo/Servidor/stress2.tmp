@@ -1,0 +1,19 @@
+# started on Thu Nov 20 16:29:29 2014
+
+
+ Performance counter stats for './carga':
+
+       4812.526376      task-clock (msec)         #    0.998 CPUs utilized          
+               619      context-switches          #    0.129 K/sec                  
+                19      cpu-migrations            #    0.004 K/sec                  
+             3.954      page-faults               #    0.822 K/sec                  
+    10.846.859.556      cycles                    #    2.254 GHz                     [83.31%]
+     5.359.515.861      stalled-cycles-frontend   #   49.41% frontend cycles idle    [83.40%]
+     3.883.858.915      stalled-cycles-backend    #   35.81% backend  cycles idle    [66.55%]
+    14.883.971.699      instructions              #    1.37  insns per cycle        
+                                                  #    0.36  stalled cycles per insn [83.11%]
+     2.422.636.872      branches                  #  503.402 M/sec                   [83.41%]
+        10.756.325      branch-misses             #    0.44% of all branches         [83.35%]
+
+       4.823019106 seconds time elapsed
+

@@ -1,0 +1,20 @@
+Matriz F': 
+[	-0.000759782	]
+
+Matriz F(x): 
+[	-0.000759782	]
+
+Matriz F' + F(x): 
+[	-0.00151956	]
+
+
+Criterio de Sylvester:
+
+N=1
+[	-0.00151956	]
+
+El determinante es: -0.00151956
+Si cumple con el criterio de Sylvester
+
+Cumple con todas las condiciones del Criterio de Silvestre por lo tanto EL CLUSTER ES ESTABLE
+

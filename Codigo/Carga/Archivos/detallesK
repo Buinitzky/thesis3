@@ -1,0 +1,43 @@
+Matriz F': 
+[	-0.00839268	 0.00305188	 0.00305188	]
+[	 0.00153257	-0.00383142	 0.00153257	]
+[	 0.00100845	 0.00100845	-0.00302534	]
+
+Matriz F(x): 
+[	-0.00839268	 0.00153257	 0.00100845	]
+[	 0.00305188	-0.00383142	 0.00100845	]
+[	 0.00305188	 0.00153257	-0.00302534	]
+
+Matriz F' + F(x): 
+[	-0.0167854	 0.00458445	 0.00406033	]
+[	 0.00458445	-0.00766284	 0.00254101	]
+[	 0.00406033	 0.00254101	-0.00605067	]
+
+
+Criterio de Silvestre:
+
+N=1
+[	-0.0167854	]
+
+El determinante es: -0.0167854
+Si cumple con el criterio de Silvestre
+
+
+N=2
+[	-0.0167854	 0.00458445	]
+[	 0.00458445	-0.00766284	]
+
+El determinante es: 0.000107606
+Si cumple con el criterio de Silvestre
+
+
+N=3
+[	-0.0167854	 0.00458445	 0.00406033	]
+[	 0.00458445	-0.00766284	 0.00254101	]
+[	 0.00406033	 0.00254101	-0.00605067	]
+
+El determinante es: -3.21781e-07
+Si cumple con el criterio de Silvestre
+
+Cumple con todas las condiciones del Criterio de Silvestre por lo tanto EL CLUSTER ES ESTABLE
+
