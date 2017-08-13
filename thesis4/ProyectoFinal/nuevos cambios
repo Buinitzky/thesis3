@@ -1,0 +1,48 @@
+Nuevos cambios:
+
+- Calculo de recursos tanto por red cableada como por wifi.
+- opcion 1: "Iniciar Experimento"
+	Al seleccionar esta opcion el servidor leera el archivo mosix para determinar las ip 	pertenecientes al cluster y asi saber cuantos clientes debe esperar, luego empezara a calcular los recursos del nodo. Una vez obtenidos todos los recursos de todos los nodos empezara a ejecutar el Krasovsy, al terminar le guardara en "Archivos/TiempoTotal" el tiempo transcurrido desde que selecciono la opcion 1 hasta q termino de ejecutar el Krasovsky.
+
+-opcion 2: "Ejecutar Krasovsky nuevamente"
+	Ejecuta solamente el programa del krasovsky nuevamente (hace una llamada al ejecutable krasovsky).
+
+-opcion 3: "Ejecutar generador de carga con MOSRUN"
+	Ejecuta el generador directamente con el Mosrun (hace una llamada al ejecutable generador).
+
+-opcion 4: "Calcular el Tiempo de ejecucion de la carga (perf)"
+	Calcula el tiempo de ejecucion de la carga (del ejecutable llamado carga), utilizando el comando perf.
+
+- El cliente ejecuta una sola vez y termina. Se elimino el menu ya q no se vio necesario.
+
+***Primero ejecutar el servidor y luego los clientes, pero se recomienda antes de presionar la opcion 1 ejecutar todos los clientes para asi el servidor no pierda tiempo esperando a que los nodos clientes terminen de explorar los recursos, una vez calculado todos los recursos presionar opcion 1 y asi obtendra el mejor tiempo total del programa...(si desea puede ejecutar la opcion 1 y posteriormente los clientes el unico cambio es el tiempo total).***
+
+- generador3 se cambio el nombre por carga.
+
+- generador2 se cambio el nombre por generador.
+
+- La carga ahora posee el peso real, si la carga es de 15MB al ejecutar el mosrun le saldra 15MB por el monitor del sistema.(Esto para corregir el problema q se le planteo donde MOSIX agregaba un peso fijo aproximado de 12MB a cualquier carga q se le suministrara).
+
+- se modifico el archivo de entrada entradaG ahora su formato es:
+	1. Esta maquina utiliza el generador(1), si no utiliza generador de carga (0).
+	2. El tamano de la carga en MB.(si quiere alterar la cantidad de MB de la carga puede hacerlo sin necesidad de modificar el Cliente, ni el servidor, ni la carga en si como se tenia q hacer anteriormente, tener en cuenta q al alterar la cantidad de MB automaticamente se incrementa el te esto por la forma q quedo hecho al final y por la limitacion de no poder usar el time.h).
+
+	3. El tiempo total que tardara el experimento.
+
+- El krasovsky ahora tiene dos salidas:
+	1.  salidaK que solo muestra 1 si el cluster es estable y 0 si no lo es.
+	2.  detallesK que muestra una informacion mucho mas detallada de los calculos hechos por el krasovsky para llegar a dicha conclusion.
+
+Formulas utilizadas:
+	Primero tener en cuenta que el generador tiene unos datos constantes de 1 trabajo por segundo.
+	
+	1. Ve=Trabajo_MB/te
+		Trabajo_MB: es el peso del trabajo en memoria (peso de la carga).
+		te: Es el tiempo de ejecucion de la carga, obtenida directamente con el perf.
+	
+	2. TTC= 1/Trabajo_MB
+
+	3. Vc= Trabajo_MB/tc
+		tc: es el tiempo de carga en este caso siempre sera 1.
+	
+	4. Vm se obtiene en base a la interfaz de red utilizada(cableada o wifi).
